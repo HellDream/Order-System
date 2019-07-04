@@ -1,16 +1,12 @@
 package com.order.System.enums;
 
-import lombok.Getter;
-
-@Getter
-public enum  ProductStatusEnum {
-    UP(0, "On Sale"),
-    DOWN(1, "Off Sale");
+public enum PayStatusEnum {
+    WAIT(0, "Waiting Payment"),
+    SUCCESS(1, "Paid");
     private Integer code;
-
     private String message;
 
-    ProductStatusEnum(Integer code, String message) {
+    PayStatusEnum(Integer code, String message) {
         this.code = code;
         this.message = message;
     }
@@ -18,6 +14,7 @@ public enum  ProductStatusEnum {
     public Integer getCode() {
         return code;
     }
+
     public String getMessage() {
         return message;
     }
