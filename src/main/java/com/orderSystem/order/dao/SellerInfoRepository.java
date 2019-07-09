@@ -1,6 +1,6 @@
-package com.order.System.dao;
+package com.orderSystem.order.dao;
 
-import com.order.System.objects.SellerInfo;
+import com.orderSystem.order.entities.SellerInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SellerInfoRepository extends JpaRepository<SellerInfo, String> {

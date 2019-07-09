@@ -1,6 +1,6 @@
-package com.order.System.dao;
+package com.orderSystem.order.dao;
 
-import com.order.System.objects.ProductInfo;
+import com.orderSystem.order.entities.ProductInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductInfoRepository extends JpaRepository<ProductInfo, String> {

@@ -1,4 +1,4 @@
-package com.order.System.objects;
+package com.orderSystem.order.entities;
 
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
@@ -17,8 +17,6 @@ public class ProductCategory {
     private Integer categoryId;
     private String categoryName;
     private Integer categoryType;
-    private Date createTime;
-    private Date updateTime;
 
     public ProductCategory() {
     }

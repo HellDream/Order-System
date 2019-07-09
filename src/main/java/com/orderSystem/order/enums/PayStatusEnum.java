@@ -1,4 +1,4 @@
-package com.order.System.enums;
+package com.orderSystem.order.enums;
 
 public enum PayStatusEnum {
     WAIT(0, "Waiting Payment"),

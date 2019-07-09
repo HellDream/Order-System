@@ -1,6 +1,6 @@
-package com.order.System.objects;
+package com.orderSystem.order.entities;
 
-import com.order.System.enums.ProductStatusEnum;
+import com.orderSystem.order.enums.ProductStatusEnum;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 

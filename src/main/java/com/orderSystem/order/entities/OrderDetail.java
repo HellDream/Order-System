@@ -1,4 +1,4 @@
-package com.order.System.objects;
+package com.orderSystem.order.entities;
 
 import lombok.Data;
 
