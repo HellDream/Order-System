@@ -19,7 +19,7 @@ public class ProductCategoryRepositoryTest {
 
     @Test
     public void test1(){
-        ProductCategory productCategory = new ProductCategory("category_1",1);
+        ProductCategory productCategory = new ProductCategory("category_3",3);
         repository.save(productCategory);
     }
 
