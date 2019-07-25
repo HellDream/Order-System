@@ -1,11 +1,10 @@
-package com.orderSystem.order.dao;
+package com.orderSystem.order.services;
 
 import com.orderSystem.order.entities.ProductInfo;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface ProductInfoRepository extends JpaRepository<ProductInfo, String> {
+public interface ProductInfoService {
     List<ProductInfo> findByProductStatus(Integer productStatus);
     List<ProductInfo> findByProductNameContains(String productName);
     ProductInfo findByProductId(String productId);
