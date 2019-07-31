@@ -6,8 +6,10 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,6 +23,16 @@ public class OrderMaster {
     private BigDecimal orderAmount;
     private Integer orderStatus = OrderStatusEnum.NEWORDER.getCode();
     private Integer payStatus = PayStatusEnum.WAIT.getCode();
+    @Transient
+    private List<OrderDetail> orderDetails;
+
+    public List<OrderDetail> getOrderDetails() {
+        return orderDetails;
+    }
+
+    public void setOrderDetails(List<OrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
+    }
 
     public String getOrderId() {
         return orderId;
