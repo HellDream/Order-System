@@ -28,10 +28,11 @@ public class ProductInfoRepositoryTest {
         ProductInfo productInfo = new ProductInfo();
         productInfo.setCategoryType(3);
         productInfo.setProductName("productName 1");
-        productInfo.setProductId("123456");
+        productInfo.setProductId("123457");
         productInfo.setProductDescription("productName 1,productName 1,productName 1");
         productInfo.setProductPrice(new BigDecimal(5.00));
         productInfo.setProductStock(100);
+        productInfo.setProductIcon("xxxx.com");
         repository.save(productInfo);
     }
 }

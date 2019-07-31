@@ -26,6 +26,16 @@ public class ProductCategory {
         this.categoryType = categoryType;
     }
 
+    public Integer getCategoryId() {
+        return categoryId;
+    }
 
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public Integer getCategoryType() {
+        return categoryType;
+    }
 }
 
