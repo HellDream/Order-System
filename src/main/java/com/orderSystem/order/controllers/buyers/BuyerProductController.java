@@ -105,4 +105,32 @@ public class BuyerProductController {
         }
         return resultDTO;
     }
+    /**
+    * @description: 具体产品详情
+    * @param:
+    *
+    */
+    @PostMapping("/{productId}")
+    public ResultDTO getProduct(@PathVariable String productId,@RequestBody ProductInfoDTO productInfoDTO){
+        ResultDTO<ProductInfoDTO> resultDTO = new ResultDTO<>();
+        logger.info("BuyerProductController.getProduct");
+        if(productInfoDTO!=null&&productInfoDTO.getProductId()!=null){
+            resultDTO.setData(productInfoDTO);
+            resultDTO.setCode(0);
+            return resultDTO;
+        }else{
+            try{
+                ProductInfo productInfo = productInfoService.findByProductId(productId);
+                ProductInfoDTO productDTO = new ProductInfoDTO();
+                BeanUtils.copyProperties(productInfo, productDTO);
+                resultDTO.setData(productDTO);
+                resultDTO.setCode(0);
+            }catch (Exception e){
+                logger.error(e.getMessage());
+                resultDTO.setCode(1);
+                resultDTO.setMsg("BuyerProductController.getProduct failed");
+            }
+        }
+        return resultDTO;
+    }
 }
