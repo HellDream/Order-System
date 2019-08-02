@@ -29,6 +29,6 @@ public interface OrderService {
     * @param: String orderId, Integer orderStatus;
     * @return OrderDTO
     */
-    OrderDTO updateOrder(OrderDTO rderDTO, int orderStatus);
+    OrderDTO updateOrder(OrderDTO orderDTO, int orderStatus);
 
 }
